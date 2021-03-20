@@ -13,3 +13,4 @@ From alpine
 
 # copy jar from the first stage
 COPY --from=builder /jmx_prometheus_javaagent/target/jmx_prometheus_javaagent-*-SNAPSHOT.jar /jmx/jmx-prom-agent.jar
+COPY --from=builder /jvm_exporter.yml /jmx/jvm_exporter.yml
